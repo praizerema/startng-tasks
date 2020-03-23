@@ -1,6 +1,6 @@
 let name= "Ayodele Praise";
 document.getElementById("name").innerHTML = name;
-let courses= ["PHP", "Python", "nodeJs", "HTML-CSS-JS"],
+let courses= ["PHP", "Python", "nodeJs", "HTML", "CSS", "JavaScript"],
 
 ol = document.createElement('ol');
 
