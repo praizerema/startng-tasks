@@ -1,0 +1,41 @@
+<script>
+
+    //2 = "yu", 3 = "gi", 5 = "oh"
+    var divisionArr=[]
+    var x=0
+    function Division(num){
+        
+        for(let i = 1; i <= num; i++){
+            //CASES FOR 2
+            if(i %2 === 0 ){
+                x= "yu" //check for 2
+                if(i %2 === 0 && i %3 ==0){ //check for 2*3
+                    x="yu-gi"
+                if(i %2 === 0 && i %3 === 0 && i %5 ===0)//check for 2*3*5
+                    x="yu-gi-oh"
+            }
+                else if(i %2 === 0 && i %5 ===0)//check for 2*5
+                    x="yu-oh"
+            }
+
+            // CASES FOR 3
+            else if(i %3 === 0){ //check for 3
+                x="gi" 
+                if(i %3 === 0 && i %5 === 0) //check for 3*5
+                    x="gi-oh" 
+            }
+
+            //CASE FOR 5
+            else if(i %5 === 0){ x= "oh"
+            }
+            
+            //if no value is divisible by 2, 3, 5 or the combination, return value
+            else  x=i
+            divisionArr.push(x)
+        }
+
+       console.log(divisionArr) //print array
+    }
+   Division(100)
+   Division(parseInt(Math.random()*200))
+</script>
